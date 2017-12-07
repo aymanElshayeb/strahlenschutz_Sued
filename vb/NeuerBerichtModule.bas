@@ -9,7 +9,7 @@ Function getFileName(rawName As String)
  getFileName = Replace(rawName, "[", "")
  getFileName = Replace(getFileName, "]", "")
  getFileName = Replace(getFileName, " ", "")
- getFileName = ActiveDocument.path & "\forms\" & getFileName & ".dotm"
+ getFileName = "C:\XRAY\forms\" & getFileName & ".dotm"
  
 End Function
 Function addNewDocument(name As String)

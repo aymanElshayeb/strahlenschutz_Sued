@@ -9,7 +9,7 @@ Sub file_save()
     Set dlgFileSaveAs = Dialogs(wdDialogFileSaveAs)
     
     'the chosen path must be specified hier
-    path = ActiveDocument.path & "\output"
+    path = "C:\XRAY\output"
     
     'to handle the case that someone has deleted the default saveAs folder
     On Error GoTo errorHandling

@@ -19,9 +19,9 @@ End Sub
 Public Function getSubFolderNames(name As String)
 
     If name = "" Then
-        Set objFolder = objFSO.GetFolder(ActiveDocument.path & "\sections\")
+        Set objFolder = objFSO.GetFolder("C:\XRAY\sections\")
     Else
-        Set objFolder = objFSO.GetFolder(ActiveDocument.path & "\sections\" & name & "\")
+        Set objFolder = objFSO.GetFolder("C:\XRAY\sections\" & name & "\")
     End If
     
     Dim items(30) As String
@@ -36,7 +36,7 @@ getSubFolderNames = items
 End Function
 Public Function getFile(parentDirectory As String, childDirectory As String)
    
-    Set objFolder = objFSO.GetFolder(ActiveDocument.path & "\sections\" & parentDirectory & "\" & childDirectory & "\")
+    Set objFolder = objFSO.GetFolder("C:\XRAY\sections\" & parentDirectory & "\" & childDirectory & "\")
     Dim items(30) As String
     Dim i As Integer
     i = 0
@@ -63,9 +63,9 @@ If (grandParentDirectory = "" Or grandParentDirectory = "" Or filename = "") The
     MsgBox "insert valid filename"
     insertSection = False
 Else
-    Selection.InsertBreak Type:=wdPageBreak
+    'Selection.InsertBreak Type:=wdPageBreak
     Dim sectionPath As String
-    sectionPath = ActiveDocument.path & "\sections\" & grandParentDirectory & "\" & parentDirectory & "\" & filename
+    sectionPath = "C:\XRAY\sections\" & grandParentDirectory & "\" & parentDirectory & "\" & filename
      Selection.InsertFile filename:=sectionPath, Range:="", _
         ConfirmConversions:=False, Link:=False, Attachment:=False
         insertSection = True

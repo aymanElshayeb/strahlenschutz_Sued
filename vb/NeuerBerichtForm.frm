@@ -3,16 +3,17 @@ Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} NeuerBerichtForm
    Caption         =   "Neuer Bericht"
    ClientHeight    =   7920
    ClientLeft      =   120
-   ClientTop       =   450
+   ClientTop       =   456
    ClientWidth     =   10200
    OleObjectBlob   =   "NeuerBerichtForm.frx":0000
-   StartUpPosition =   1  'CenterOwner
+   StartUpPosition =   1  'Fenstermitte
 End
 Attribute VB_Name = "NeuerBerichtForm"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
 
 
 Private Sub CommandButton1_Click()

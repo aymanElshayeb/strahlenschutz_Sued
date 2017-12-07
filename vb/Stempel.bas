@@ -10,7 +10,7 @@ Sub add_Stempel()
     
     On Error GoTo errorHandling
     ' setting the location of the stempel
-    Let picLoc = ActiveDocument.path & "\img\" & "stempel.jpg"
+    Let picLoc = "C:\XRAY\img\" & "stempel.jpg"
     
     ' adding the picture to the selection area
     Set wrdPic = Selection.InlineShapes.AddPicture( _
@@ -19,43 +19,7 @@ Sub add_Stempel()
     ' to modify the height and the width independent
     wrdPic.LockAspectRatio = msoFalse
     
-    ' scaling the height
-        'percent to resize
-        lngPercent2Scale = 20
-        
-        'the height of the scaled image
-        lngScaledHeight = wrdPic.Height
-        
-        'rescale to original size
-        wrdPic.ScaleHeight = 100
-        
-        'the size of the original image
-        lngOriginalHeight = wrdPic.Height
-        
-        'rescale image
-        wrdPic.ScaleHeight = lngScaledHeight / lngOriginalHeight * 100
-        
-        'resize
-        wrdPic.ScaleHeight = lngPercent2Scale * lngScaledHeight / lngOriginalHeight
-    
-    ' scaling the width
-        'percent to resize
-        lngPercent2Scale = 20
-        
-        'the width of the scaled image
-        lngScaledWidth = wrdPic.Width
-        
-        'rescale to original size
-        wrdPic.ScaleWidth = 100
-        
-        'the size of the original image
-        lngOriginalWidth = wrdPic.Width
-        
-        'rescale image
-        wrdPic.ScaleWidth = lngScaledWidth / lngOriginalWidth * 100
-        
-        'resize
-        wrdPic.ScaleWidth = lngPercent2Scale * lngScaledWidth / lngOriginalWidth
+    'Here
         
     wrdPic.Range.Font.Hidden = False
     Exit Sub
